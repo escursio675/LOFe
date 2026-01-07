@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+html, body {
+  cursor: url("../public/arrow3.png") 2 2, auto;
+}
+
+button, a,
+[role="button"],
+input,
+select,
+textarea {
+  cursor: url("../public/arrow3.png") 2 2, auto;
+}
+
