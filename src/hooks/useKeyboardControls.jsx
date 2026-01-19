@@ -26,6 +26,9 @@ export default function useKeyboardControls(actions) {
         case "l":
           actions.toggleLowPower();
           break;
+        case 'g':
+          actions.toggleChangeGif();
+          break;
       }
     };
 
