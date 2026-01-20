@@ -1,4 +1,9 @@
 import {useState, useEffect} from 'react';
+import mail from "../assets/mail.png";
+import github from "../assets/github.png";
+import linkedin from "../assets/linkedin.png";
+import twitter from "../assets/twitter.png";
+
 
 export default function Menu({visible, onToggle, count}){
 
@@ -18,7 +23,7 @@ export default function Menu({visible, onToggle, count}){
             {visible &&(
                 <div className={`text-[#811dc3] absolute top-1/2 left-1/2 bg-black
                 lg:h-[70vh] lg:w-[60vh] -translate-x-1/2 -translate-y-1/2 border-solid
-                border-8 border-[#811dc3] rounded flex flex-col gap-[3vh]
+                border-8 border-[#811dc3] rounded flex flex-col gap-[2vh]
                 ${isMailModel ? "brightness-50" : "brightness-100"}`}>
 
                     <div className="flex flex-row-reverse">
@@ -58,25 +63,25 @@ export default function Menu({visible, onToggle, count}){
 
                     <div className="flex justify-center">
                         <button onClick={() => setisMailModel(true)}>
-                            <img src="/src/assets/mail.png" alt="Mail" 
+                            <img src={mail} alt="Mail" 
                             className="filter invert lg:h-[7vh] lg:w-[7vh]" />
                         </button>
 
                         <a href="https://github.com/escursio675" target="_blank" 
                         rel="noopener noreferrer">
-                            <img src="src/assets/github.png" alt="Github" 
+                            <img src={github} alt="Github" 
                             className="filter invert lg:h-[7vh] lg:w-[7vh]" />
                         </a>
 
                         <a href="https://www.linkedin.com/in/abhimanyu-saikia/" target="_blank"
                         rel="noopener noreferrer">
-                            <img src="src/assets/linkedin.png" alt="LinkedIn" 
+                            <img src={linkedin} alt="LinkedIn" 
                             className="filter invert lg:h-[7vh] lg:w-[7vh]" />
                         </a>
 
                         <a href="https://x.com/yu_workss" target="_blank"
                         rel="noopener noreferrer">
-                            <img src="src/assets/twitter.png" alt="Twitter" 
+                            <img src={twitter} alt="Twitter" 
                             className="filter invert lg:h-[7vh] lg:w-[7vh]" />
                         </a>
                     </div>
