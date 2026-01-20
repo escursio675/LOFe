@@ -11,6 +11,8 @@ export default function MediaControls({
   duration,
   currentTime,
   togglePlay,
+  title,
+  url,
   start,
   end,
   prev5,
@@ -20,6 +22,15 @@ export default function MediaControls({
   return (
     <div className="absolute bottom-1/25 flex-row items-center justify-center gap-[5vh] 
       border-none">
+      
+      <div className="text-[#811dc3] flex justify-center lg:pb-4 lg:text-xl">
+        <a href={url} rel="noopener noreferrer" target="_blank"
+        className="hover:brightness-150">
+          {title}
+        </a>
+      </div>
+
+
       <div className="flex flex-row gap-[5vh] focus:outline-none">
         <button onClick={start}>
           
@@ -66,7 +77,7 @@ export default function MediaControls({
         max={duration}
         value={currentTime}
         onChange={e => seek(e.target.value)}
-        className="w-full range-slider text-[#811dc3]"
+        className="w-full range-slider text-[#811dc3] hover:brightness-150"
       />
     </div>
   );

@@ -13,7 +13,7 @@ export default function VolumeControls({ volume, onMute, onVolumeChange}) {
         max="100"
         value={volume}
         onChange={(e) => onVolumeChange(+e.target.value)}
-        className="range-slider text-[#811dc3]"
+        className="range-slider text-[#811dc3] hover:brightness-150"
       />
     </div>
   );

@@ -1,14 +1,23 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 
-export default function Menu({visible, onToggle}){
+export default function Menu({visible, onToggle, count}){
 
     const [isMailModel, setisMailModel] = useState(false);
+    const [visitorCount, setVisitorCount] = useState(null);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        if(count != null){
+            setVisitorCount(count);
+            setLoading(false);
+        }
+    }, []);
 
     return(
         <div className="flex"
         style={{fontFamily: 'silkscreen'}}>
             <div className="absolute top-1/30 right-1/40 flex flex-row gap-[3vh] border-none">
-                <button className ="text-[#811dc3] lg:text-3xl
+                <button className ="text-[#811dc3] lg:text-3xl hover:brightness-150
                 focus:outline-none" onClick={()=> onToggle(!visible)}
                 >
                     MENU
@@ -23,7 +32,7 @@ export default function Menu({visible, onToggle}){
 
                     <div className="flex flex-row-reverse">
                         <button onClick={()=> onToggle(!visible)} 
-                        className="lg:text-4xl">
+                        className="lg:text-4xl hover:brightness-150">
                             X
                         </button>
                     </div>
@@ -79,6 +88,16 @@ export default function Menu({visible, onToggle}){
                             <img src="src/assets/twitter.png" alt="Twitter" 
                             className="filter invert lg:h-[7vh] lg:w-[7vh]" />
                         </a>
+                    </div>
+
+                    <div className="flex justify-end text-2xl mr-[2vh] font-bold">
+                        {
+                            loading
+                            ? "Loading..."
+                            : typeof visitorCount === "number"
+                            ? Math.floor(visitorCount / 2)
+                            : "Error!"
+                        }
                     </div>
 
                 </div>

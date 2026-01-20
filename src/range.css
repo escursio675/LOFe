@@ -27,10 +27,7 @@
   transition: transform 0.15s ease, opacity 0.15s ease;
 }
 
-/* Hover interaction */
-.range-slider:hover::-webkit-slider-thumb {
-  background-color: currentColor;
-}
+
 
 
    /* Firefox track */
@@ -58,9 +55,7 @@
   transition: transform 0.15s ease;
 }
 
-.range-slider:hover::-moz-range-thumb {
-  background-color: currentColor;
-}
+
 
 
    /* Focus state (accessibility) */

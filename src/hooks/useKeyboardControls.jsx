@@ -29,6 +29,9 @@ export default function useKeyboardControls(actions) {
         case 'g':
           actions.toggleChangeGif();
           break;
+        case 'h':
+          actions.toggleUI();
+          break;
       }
     };
 
