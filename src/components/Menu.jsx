@@ -3,15 +3,6 @@ import {useState, useEffect} from 'react';
 export default function Menu({visible, onToggle, count}){
 
     const [isMailModel, setisMailModel] = useState(false);
-    const [visitorCount, setVisitorCount] = useState(null);
-    const [loading, setLoading] = useState(true);
-
-    useEffect(() => {
-        if(count != null){
-            setVisitorCount(count);
-            setLoading(false);
-        }
-    }, []);
 
     return(
         <div className="flex"
@@ -92,11 +83,9 @@ export default function Menu({visible, onToggle, count}){
 
                     <div className="flex justify-end text-2xl mr-[2vh] font-bold">
                         {
-                            loading
+                            count == null
                             ? "Loading..."
-                            : typeof visitorCount === "number"
-                            ? Math.floor(visitorCount / 2)
-                            : "Error!"
+                            : Math.floor(count / 2)
                         }
                     </div>
 
