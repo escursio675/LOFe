@@ -86,7 +86,7 @@ export default function Menu({visible, onToggle, count}){
                         </a>
                     </div>
 
-                    <div className="flex justify-end text-2xl mr-[2vh] font-bold">
+                    <div className="flex justify-end items-end text-2xl mr-[2vh] mt-auto font-bold">
                         {
                             count == null
                             ? "Loading..."
