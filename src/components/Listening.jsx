@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react';
+import sound from '../assets/sound.gif';
 
 export default function Listening(){
 
@@ -21,7 +22,7 @@ export default function Listening(){
         <div className="absolute bottom-1/20 left-1/35 text-2xl text-[#B4182D]
         drop-shadow-[0_0_2px_#d4243c]"
               style={{fontFamily: 'silkscreen'}}>
-                <img src='/sound.gif' className="lg:w-[5vh] lg:h-[5vh]"  />
+                <img src={sound} className="lg:w-[5vh] lg:h-[5vh]"  />
                 {listenVals[index]}
         </div>
     )
