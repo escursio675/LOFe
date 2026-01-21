@@ -22,6 +22,21 @@ export default function BackgroundGif({ visible, gifChange, isBright}) {
     "/tenor6.gif",
     "/universe-star.gif",
     "/vintage-mood.gif",
+    "/artglow.gif",
+    "/glitterwave.gif",
+    "/glow.gif",
+    "/jigglypuff.gif",
+    "/lain.gif",
+    "/pochita.gif",
+    "/rainbucket.gif",
+    "/rainhigh.gif",
+    "/skeleton.gif",
+    "/spaceflight.gif",
+    "/test.gif",
+    "/trafficrain.gif",
+    "/waveflower.gif",
+    "/waves.gif",
+    "/wipper.gif",
   ];
 
   useEffect(() => {
